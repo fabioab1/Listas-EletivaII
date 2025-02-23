@@ -159,3 +159,15 @@ Route::post('/listaex12', function(Request $request){
     $promocao = $preco - $desconto * $preco / 100;
     return view('lista.ex12', compact('promocao'));
 });
+
+Route::get('/ex13', function(){
+    return view('lista.ex13');
+});
+
+Route::post('/listaex13', function(Request $request){
+    $capital = floatval($request->input('capital'));
+    $juros = floatval($request->input('juros'));
+    $periodo = intval($request->input('periodo'));
+    $rjuros = $capital * ($juros / 100) * $periodo;
+    return view('lista.ex13', compact('rjuros'));
+});
