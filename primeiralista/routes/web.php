@@ -137,3 +137,14 @@ Route::post('/listaex10', function(Request $request){
     $milhas = $km * 0.621371;
     return view('lista.ex10', compact('milhas'));
 });
+
+Route::get('/ex11', function(){
+    return view('lista.ex11');
+});
+
+Route::post('/listaex11', function(Request $request){
+    $peso = floatval($request->input('peso'));
+    $altura = floatval($request->input('altura'));
+    $imc = $peso / $altura ** 2;
+    return view('lista.ex11', compact('imc'));
+});
