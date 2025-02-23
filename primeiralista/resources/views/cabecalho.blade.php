@@ -17,6 +17,15 @@
                         <li><a class="dropdown-item" href="/ex4">Exercício 4</a></li>
                         <li><a class="dropdown-item" href="/ex5">Exercício 5</a></li>
                         <li><a class="dropdown-item" href="/ex6">Exercício 6</a></li>
+                        <li><a class="dropdown-item" href="/ex7">Exercício 7</a></li>
+                        <li><a class="dropdown-item" href="/ex8">Exercício 8</a></li>
+                        <li><a class="dropdown-item" href="/ex9">Exercício 9</a></li>
+                        <li><a class="dropdown-item" href="/ex10">Exercício 10</a></li>
+                        <li><a class="dropdown-item" href="/ex11">Exercício 11</a></li>
+                        <li><a class="dropdown-item" href="/ex12">Exercício 12</a></li>
+                        <li><a class="dropdown-item" href="/ex13">Exercício 13</a></li>
+                        <li><a class="dropdown-item" href="/ex14">Exercício 14</a></li>
+                        <li><a class="dropdown-item" href="/ex15">Exercício 15</a></li>
                     </ul>
                 </li>
             </ul>

@@ -96,3 +96,13 @@ Route::post('/listaex6', function(Request $request){
     $perimetro = $largura + $altura;
     return view('lista.ex6', compact('perimetro'));
 });
+
+Route::get('/ex7', function(){
+    return view('lista.ex7');
+});
+
+Route::post('/listaex7', function(Request $request){
+    $raio = floatval($request->input('raio'));
+    $perimetroCirc = 2 * pi() * $raio;
+    return view('lista.ex7', compact('perimetroCirc'));
+});
