@@ -64,3 +64,14 @@ Route::post('/listaex3', function(Request $request){
     $celsius = ($fahrenheit - 32) * 5/9;
     return view('lista.ex3', compact('celsius'));
 });
+
+Route::get('/ex4', function(){
+    return view('lista.ex4');
+});
+
+Route::post('/listaex4', function(Request $request){
+    $largura = floatval($request->input('largura'));
+    $altura = floatval($request->input('altura'));
+    $area = $largura * $altura;
+    return view('lista.ex4', compact('area'));
+});
