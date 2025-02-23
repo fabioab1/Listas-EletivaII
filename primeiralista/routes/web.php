@@ -117,3 +117,13 @@ Route::post('/listaex8', function(Request $request){
     $resultado = $base ** $expoente;
     return view('lista.ex8', compact('resultado'));
 });
+
+Route::get('/ex9', function(){
+    return view('lista.ex9');
+});
+
+Route::post('/listaex9', function(Request $request){
+    $metros = floatval($request->input('metros'));
+    $cm = $metros * 100;
+    return view('lista.ex9', compact('cm'));
+});
