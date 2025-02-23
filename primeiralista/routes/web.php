@@ -148,3 +148,14 @@ Route::post('/listaex11', function(Request $request){
     $imc = $peso / $altura ** 2;
     return view('lista.ex11', compact('imc'));
 });
+
+Route::get('/ex12', function(){
+    return view('lista.ex12');
+});
+
+Route::post('/listaex12', function(Request $request){
+    $preco = floatval($request->input('preco'));
+    $desconto = intval($request->input('desconto'));
+    $promocao = $preco - $desconto * $preco / 100;
+    return view('lista.ex12', compact('promocao'));
+});
