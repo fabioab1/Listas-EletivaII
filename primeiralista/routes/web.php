@@ -106,3 +106,14 @@ Route::post('/listaex7', function(Request $request){
     $perimetroCirc = 2 * pi() * $raio;
     return view('lista.ex7', compact('perimetroCirc'));
 });
+
+Route::get('/ex8', function(){
+    return view('lista.ex8');
+});
+
+Route::post('/listaex8', function(Request $request){
+    $base = intval($request->input('base'));
+    $expoente = intval($request->input('expoente'));
+    $resultado = $base ** $expoente;
+    return view('lista.ex8', compact('resultado'));
+});
