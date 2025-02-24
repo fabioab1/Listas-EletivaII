@@ -190,7 +190,7 @@ Route::get('/ex15', function(){
 
 Route::post('/listaex15', function(Request $request){
     $dias = intval($request->input('dias'));
-    $segundos = $dias * 86.400;
+    $segundos = $dias * 86400;
     $minutos = $dias * 1440;
     $horas = $dias * 24;
     return view('lista.ex15', compact('minutos','horas','segundos'));
