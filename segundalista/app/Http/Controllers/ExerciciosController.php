@@ -47,4 +47,23 @@ class ExerciciosController extends Controller
             $valor = $valor - ($valor * 15/100);
         return view('lista.ex3', compact('valor'));
     }
+
+    public function abrirForm4(){
+        return view('lista.ex4');
+    }
+
+    public function respForm4(Request $request){
+        $valor = intval($request->input('valor'));
+        $contador = 0;
+        for ($i = 1; $i <= $valor; $i++)
+        {
+            $divisoes = 0;
+            for ($j = 1; $j <= $i; $j++)
+                if ($i % $j == 0)
+                    $divisoes++;
+            if ($divisoes == 2)
+                $contador += $i;
+        }
+        return view('lista.ex4', compact('contador'));
+    }
 }
