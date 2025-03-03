@@ -162,4 +162,13 @@ class ExerciciosController extends Controller
             $fatorial *= $i;
         return view('lista.ex9', compact('fatorial'));
     }
+
+    public function abrirForm10(){
+        return view('lista.ex10');
+    }
+
+    public function respForm10(Request $request){
+        $numero = intval($request->input('numero'));
+        return view('lista.ex10', compact('numero'));
+    }
 }
