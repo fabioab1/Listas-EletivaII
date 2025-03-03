@@ -141,4 +141,13 @@ class ExerciciosController extends Controller
         }
         return view('lista.ex7', compact('somatoria'));
     }
+
+    public function abrirForm8(){
+        return view('lista.ex8');
+    }
+
+    public function respForm8(Request $request){
+        $numero = intval($request->input('numero'));
+        return view('lista.ex8', compact('numero'));
+    }
 }
