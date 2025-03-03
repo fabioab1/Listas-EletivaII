@@ -116,4 +116,29 @@ class ExerciciosController extends Controller
         }
         return view('lista.ex5', compact('mes'));
     }
+
+    public function abrirForm6(){
+        return view('lista.ex6');
+    }
+
+    public function respForm6(Request $request){
+        $numero = intval($request->input('numero'));
+        return view('lista.ex6', compact('numero'));
+    }
+
+    public function abrirForm7(){
+        return view('lista.ex7');
+    }
+
+    public function respForm7(Request $request){
+        $numero = intval($request->input('numero'));
+        $somatoria = 0;
+        $i = 1;
+        while ($i <= $numero)
+        {
+            $somatoria += $i;
+            $i++;
+        }
+        return view('lista.ex7', compact('somatoria'));
+    }
 }
