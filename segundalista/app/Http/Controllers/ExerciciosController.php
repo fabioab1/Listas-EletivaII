@@ -66,4 +66,54 @@ class ExerciciosController extends Controller
         }
         return view('lista.ex4', compact('contador'));
     }
+
+    public function abrirForm5(){
+        return view('lista.ex5');
+    }
+
+    public function respForm5(Request $request){
+        $valorMes = intval($request->input('valorMes'));
+        $mes = "";
+        switch ($valorMes) {
+            case 1:
+                $mes = "Janeiro";
+                break;
+            case 2:
+                $mes = "Fevereiro";
+                break;
+            case 3:
+                $mes = "Março";
+                break;
+            case 4:
+                $mes = "Abril";
+                break;
+            case 5:
+                $mes = "Maio";
+                break;
+            case 6:
+                $mes = "Junho";
+                break;
+            case 7:
+                $mes = "Julho";
+                break;
+            case 8:
+                $mes = "Agosto";
+                break;
+            case 9:
+                $mes = "Setembro";
+                break;
+            case 10:
+                $mes = "Outubro";
+                break;
+            case 11:
+                $mes = "Novembro";
+                break;
+            case 12:
+                $mes = "Dezembro";
+                break;
+            default:
+                $mes = "Digite um valor válido";
+        }
+        return view('lista.ex5', compact('mes'));
+    }
 }
