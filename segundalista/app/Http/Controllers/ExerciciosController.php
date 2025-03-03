@@ -150,4 +150,16 @@ class ExerciciosController extends Controller
         $numero = intval($request->input('numero'));
         return view('lista.ex8', compact('numero'));
     }
+
+    public function abrirForm9(){
+        return view('lista.ex9');
+    }
+
+    public function respForm9(Request $request){
+        $numero = intval($request->input('numero'));
+        $fatorial = 1;
+        for ($i = $numero; $i >= 1; $i--)
+            $fatorial *= $i;
+        return view('lista.ex9', compact('fatorial'));
+    }
 }
